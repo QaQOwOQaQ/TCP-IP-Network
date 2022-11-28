@@ -5,7 +5,7 @@ server:
 
 .PHONY:client
 client:
-	gcc _client.c -o client -Wall -Werror -g 
+	g++ _client.c -o client -Wall -Werror -g 
 	./client 127.0.0.1 9190
 
 .PHONY:clean
