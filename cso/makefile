@@ -1,12 +1,12 @@
 .PHONY:server
 server:
-	gcc _server.c -o server -Wall -Werror -g 
+	gcc web_server.c -o server -g -lpthread -D_REENTRANT
 	./server 9190
 
 .PHONY:client
 client:
-	gcc _client.c -o client -Wall -Werror -g 
-	./client 127.0.0.1 9190
+	gcc _client.c -o client -Wall -Werror -g -D_REENTRANT
+	./client 127.0.0.1 5500
 
 .PHONY:clean
 clean:
